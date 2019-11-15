@@ -90,6 +90,9 @@ content:
   \\"license\\": \\"ISC\\",
   \\"licenseFilename\\": \\"LICENSE\\",
   \\"readmeFilename\\": \\"README.md\\",
+  \\"native\\": {
+    \\"packageIdentifier\\": \\"com.reactlibrary\\"
+  },
   \\"peerDependencies\\": {
     \\"react\\": \\"^16.8.1\\",
     \\"react-native\\": \\">=0.59.0-rc.0 <1.0.x\\"
@@ -252,7 +255,7 @@ def configureReactNativePom(def pom) {
         name packageJson.title
         artifactId packageJson.name
         version = packageJson.version
-        group = \\"com.reactlibrary\\"
+        group = packageJson.native.packageIdentifier
         description packageJson.description
         url packageJson.repository.baseUrl
 

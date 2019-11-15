@@ -1,6 +1,6 @@
 module.exports = platform => [{
   name: () => `${platform}/build.gradle`,
-  content: ({ packageIdentifier }) => `// ${platform}/build.gradle
+  content: () => `// ${platform}/build.gradle
 
 def safeExtGet(prop, fallback) {
     rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
@@ -74,7 +74,7 @@ def configureReactNativePom(def pom) {
         name packageJson.title
         artifactId packageJson.name
         version = packageJson.version
-        group = "${packageIdentifier}"
+        group = packageJson.native.packageIdentifier
         description packageJson.description
         url packageJson.repository.baseUrl
 

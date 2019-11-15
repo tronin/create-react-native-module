@@ -21,7 +21,7 @@ ${name};
 `,
 }, {
   name: () => 'package.json',
-  content: ({ moduleName, platforms, githubAccount, authorName, authorEmail, license }) => {
+  content: ({ moduleName, packageIdentifier, platforms, githubAccount, authorName, authorEmail, license }) => {
     const withWindows = platforms.indexOf('windows') >= 0;
 
     const peerDependencies =
@@ -68,6 +68,9 @@ ${name};
   "license": "${license}",
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
+  "native": {
+    "packageIdentifier": "${packageIdentifier}"
+  },
   "peerDependencies": ${peerDependencies},
   "devDependencies": ${devDependencies}
 }
