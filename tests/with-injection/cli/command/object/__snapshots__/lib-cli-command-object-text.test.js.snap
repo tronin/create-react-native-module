@@ -16,9 +16,13 @@ Object {
       "description": "The module library package name to be used in package.json. Default: react-native-(name in param-case)",
     },
     Object {
+      "command": "--class-name [className]",
+      "description": "The name of the object to be exported by the JavaScript and by the native code. Default: (prefix)(name in PascalCase)",
+    },
+    Object {
       "command": "--module-prefix [modulePrefix]",
       "default": "react-native",
-      "description": "The module prefix for the library module, ignored if --module-name is specified",
+      "description": "The module prefix for the library module package name, ignored if --module-name is specified",
     },
     Object {
       "command": "--package-identifier [packageIdentifier]",

@@ -40,8 +40,18 @@ Array [
   Object {
     "option": Object {
       "args": Array [
+        "--class-name [className]",
+        "The name of the object to be exported by the JavaScript and by the native code. Default: (prefix)(name in PascalCase)",
+        [Function],
+        undefined,
+      ],
+    },
+  },
+  Object {
+    "option": Object {
+      "args": Array [
         "--module-prefix [modulePrefix]",
-        "The module prefix for the library module, ignored if --module-name is specified",
+        "The module prefix for the library module package name, ignored if --module-name is specified",
         [Function],
         "react-native",
       ],
